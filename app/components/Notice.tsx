@@ -22,14 +22,8 @@ export default function Notice(){
 
     },[supabase]);
     return(
-        <Fragment>
-            {
-            notice.length === 0 ?
-            '' :
-            <h2 className="border-2 border-red-500">
-                <span className="text-3xl">{notice} is our new Author!</span>
-            </h2>
-            }
-        </Fragment>
+        <h2 className={`border-2 border-red-500 ${notice.length === 0 ? "hidden" : "block"}`}>
+            <span className="text-3xl">{notice} is our new Author!</span>
+        </h2>
     )
 }
