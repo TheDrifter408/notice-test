@@ -3,11 +3,11 @@ import { ArticleItemProps } from "../types";
 
 export default function ArticleItem({id,title,paragraph}:ArticleItemProps){
     return(
-        <Fragment>
-            <h2>{title}</h2>
+        <div className="w-[90%] rounded-lg">
+            <h2 className="capitalize">{title}</h2>
             <article>
                 {paragraph}
             </article>
-        </Fragment>
+        </div>
     )
 }

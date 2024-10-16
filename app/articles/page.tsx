@@ -7,7 +7,7 @@ export default async function Page(){
     const { data:ArticleItemProps }  = await supabase.from('articles').select(`
         id,title,paragraph`);
     return (
-        <main>
+        <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
             <Notice />
             <h1>All articles</h1>
             {
