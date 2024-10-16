@@ -9,7 +9,7 @@ export default async function Page(){
     return (
         <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
             <Notice />
-            <h1>All articles</h1>
+            <h1 className="text-2xl w-fit mx-auto">All articles</h1>
             {
                 ArticleItemProps?.length === 0 ? 
                 <h1>No Articles!</h1> : 
