@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { createClient } from "@/utils/supabase/client";
 import { off } from "process";
 export default function Notice(){
@@ -22,12 +22,14 @@ export default function Notice(){
 
     },[supabase]);
     return(
-        <h2 className="border-2 border-red-500">
+        <Fragment>
             {
             notice.length === 0 ?
             '' :
-            <span className="text-3xl">{notice} is our new Author!</span>
+            <h2 className="border-2 border-red-500">
+                <span className="text-3xl">{notice} is our new Author!</span>
+            </h2>
             }
-        </h2>
+        </Fragment>
     )
 }
